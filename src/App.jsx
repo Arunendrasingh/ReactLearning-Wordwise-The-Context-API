@@ -10,15 +10,13 @@ function App() {
   return (
     <>
       <BrowserRouter>
-        <div className="home_root">
-          {/* <PageNav /> */}
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="product" element={<Product />} />
-            <Route path="pricing" element={<Pricing />} />
-            <Route path="*" element={<PageNotFound />} />
-          </Routes>
-        </div>
+        {/* <PageNav /> */}
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="product" element={<Product />} />
+          <Route path="pricing" element={<Pricing />} />
+          <Route path="*" element={<PageNotFound />} />
+        </Routes>
       </BrowserRouter>
     </>
   );
