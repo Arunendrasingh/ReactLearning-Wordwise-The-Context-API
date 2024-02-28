@@ -1,5 +1,4 @@
-import styles from "./CityItem.module.css"
-
+import styles from "./CityItem.module.css";
 
 const formatDate = (date) =>
   new Intl.DateTimeFormat("en", {
@@ -9,8 +8,8 @@ const formatDate = (date) =>
     weekday: "long",
   }).format(new Date(date));
 
-export default function CityItem({city}) {
-    console.log("city Detail: ", city)
+export default function CityItem({ city }) {
+  console.log("city Detail: ", city);
   return (
     <li className={styles.cityItem}>
       <span className={styles.emoji}>{city.emoji}</span>
@@ -18,5 +17,5 @@ export default function CityItem({city}) {
       <time className={styles.data}>{formatDate(city.date)}</time>
       <button className={styles.deleteBtn}>&times;</button>
     </li>
-  )
+  );
 }
