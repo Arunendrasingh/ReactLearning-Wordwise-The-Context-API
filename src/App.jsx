@@ -8,6 +8,8 @@ import Login from "./pages/Login";
 import AppLayout from "./pages/AppLayout";
 import CityList from "./components/CityList";
 import { useEffect, useState } from "react";
+import CountryList from "./components/CountryList";
+import City from "./components/City";
 // import PageNav from "./components/PageNav";
 
 /* 
@@ -52,7 +54,8 @@ function App() {
             {/* <Route index element={<CityList />} /> */}
             <Route index element={<CityList cityList={cityList} isLoading={isLoading} />} />
             <Route path="cities" element={<CityList cityList={cityList} isLoading={isLoading} />} />
-            <Route path="countries" element={<p> List of Contry</p>} />
+            <Route path="cities/:id" element={<City />} />
+            <Route path="countries" element={<CountryList cities={cityList} isLoading={isLoading} />} />
             <Route path="form" element={<p> Form</p>} />
           </Route>
           <Route path="*" element={<PageNotFound />} />
